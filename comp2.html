@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(239, 239, 239);
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            float: left;
+            margin-left: 100px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .flex>div{
+            margin: 20px;
+            padding: 20px;
+        }
+        #image{
+            filter: invert(100%);
+            opacity: 0.5;
+            float: left;
+            padding: 20px;
+            padding-right: 100px;
+        }
+        .table{
+
+            padding-top: 30px;
+            padding-left: 60px;
+        }
+        .td{
+            border: 2px rgb(251, 221, 54) solid;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        nav{
+            background-color: black;
+            text-align: center;
+            padding-bottom: 50px;
+            height: 50px;
+        }
+        #about{
+            width: 1020px;
+            height: 500px;
+            font-size: 25px;
+            text-align: center;
+            margin: auto;
+            line-height: 50px;
+        }
+        table{
+            margin: auto;
+        }
+        td{
+            width: 200px;
+            text-align: center;
+            padding: 30px;
+        }
+        .name{
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .left{
+            width: 500px;
+            height: 550px;
+            background-color: white;
+            font-size: 18px;
+            box-shadow: 5px 5px 5px 5px rgb(172, 175, 177);
+        }
+        .boxhead{
+            font-weight: bolder;
+            font-size: x-large;
+            padding-left: 40px;
+        }
+        .contenthead{
+            font-weight: bolder;
+            font-size: larger;
+            padding-left: 40px;
+        }
+        li{
+            padding-top: 10px;
+        }
+        #flex2{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+    </style>
+</head>
+<body><div id="top">
+<nav>
+<div>
+    <img id="image" src="data:image/png;base64,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" alt="" height="80px" width="100px">
+    <div class="flex">
+        <div><a href="http://127.0.0.1:5500/comp.html">Home</a></div>
+        <div><a href="http://127.0.0.1:5500/comp2.html">About Us</a></div>
+        <div><a href="">Classes</a></div>
+        <div><a href="">Contact Us</a></div>
+    </div>
+    </div>
+    <div>
+        <table class="table" cellspacing="10px">
+            <tr>
+                <td class="td">
+                    <a href="" style="text-decoration: none; color: rgb(248, 245, 245);">Call Us Now</a>
+                </td>
+                <td class="td">
+                    <a href="" style="text-decoration: none; color: rgb(246, 242, 242);">Email Us Now</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </nav>
+    <div id="image1"><img src="https://swall.teahub.io/photos/small/66-663423_20-barbell-wallpapers-hd-download-imagenes-de-gym.jpg" alt="image" width="100%" height="400px"></div>
+    <div id="about">
+        <h1>About us</h1>
+        <p>Gym Fitness Institute was started on World Health Day on 7 th April 2006. It’s been more than a decade of educating people in fitness. Every year 1000+ students pass out of the institute. Gym Fitness Institute offers the most exciting and up-to-date curriculum as well as ongoing training in all aspects of the fitness industry.
+
+            Gym Fitness Institute is the only Advanced Personal Trainer program, which offers you low-cost tuition, fast test results and complete career development. Becoming a Gym Fitness Institute certified Advanced Personal trainer is your foundation for success. It offers you complete approach to fitness, wellness and business skills. Make an investment in yourself and become a Gym Fitness Institute certified personal trainer.</p>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Ms. Shraddha Gandit</p><p>HOD & Nutritionist-Gym Fitness Institue</p></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Dr. Shreyash Gujarati</p><p>-Head of Faculty</p></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Dr. Nikita Nadkarni</p><p>-Sr. Exercise Science Faculty</p></td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Dr. Preeti Angral</p><p>-Sr. Exercise Science Faculty</p></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Mr. Arun Saxena</p><p>-Sr. Exercise Science Faculty</p></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Dr. Nikhil Desale</p><p>-Exercise Science Faculty</p></td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Dr. Karan Sonic</p><p>-Exercise Science Faculty</p></td><td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Mr. Vishal Pevekar</p><p>-Exercise Science Faculty</p></td><td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeTLfa6K6MJEB1_v91zWfX8xxTf_3CbkfwMLa3wkYWJzNpZtbhsM5RMMLGCaNMNtLR84&usqp=CAU" alt="image" height="200px" width="200px"><p class="name">Mr. Akhil Kumar</p><p>-Exercise Science Faculty</p></td>
+            </tr>
+        </table>
+    </div>
+    <div id="flex2">
+    <div class="left">
+        <p class="boxhead">Certification & Accreditations</p>
+        <p class="contenthead">Offline</p>
+        <ol>
+            <li>Advanced Personal Trainer Certification</li>
+            <li>Female fitness trainer Certification</li>
+            <li>Special population Certification</li>
+            <li>CPR Certification Cardiopulmonary resuscitation</li>
+            <li>AED Certification Automated external defibrillator</li>
+            <li>Skill India Certificate</li>
+        </ol>
+        <p class="contenthead">Online</p>
+        <ol>
+            <li>Main course - Advance personal trainer (duration 1.5 months)</li>
+        </ol>
+    </div>
+    <div class="left">
+        <p class="boxhead">Courses</p>
+        <p class="contenthead">Our popular fitness courses</p>
+        <ol>
+            <li>GGFI Online Advanced Personal Training</li>
+            <li>GGFI Offline Advanced Personal Training</li>
+            <li>GGFI Offline Advanced Personal Training + Skill India Government Certification</li>
+        </ol>
+        <p class="contenthead">Other courses</p>
+        <ol>
+            <li>Female Fitness</li>
+            <li>Special Population & Medical Conditions</li>
+            <li>Sports Injuries</li>
+            <li>Calories Counting</li>
+            <li>Intermittent Fasting</li>
+            <li>Quick Result Workout</li>
+            <li>Functional training</li>
+        </ol>
+    </div></div>
+</body>
+</html>
